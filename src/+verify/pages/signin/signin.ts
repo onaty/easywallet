@@ -45,16 +45,7 @@ export class SigninPage {
     this.navCtrl.setRoot(SignupPage);
   }
   signin() {
-    let loader = this.loadingCtrl.create();
-    loader.present();
-    this.SigninService.signin(this.info.value)
-      .then((data: any) => {
-       
-      })
-      .catch(err => {
-        loader.dismiss();
-        this.FeedbackService.show("danger", "", err);
-      });
+  
   }
 
   forgot() {
