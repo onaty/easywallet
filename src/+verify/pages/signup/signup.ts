@@ -20,7 +20,7 @@ export class SignupPage {
   data: any;
   business_category;
   country;
-  constructor(public UserService: UserService,public loadingCtrl: LoadingController,
+  constructor(public UserService: UserService, public loadingCtrl: LoadingController,
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
@@ -32,7 +32,7 @@ export class SignupPage {
       unique_name: [''],
       user_full_name: [''],
       email: ['', Validators.required],
-      phone: ['',Validators.required],
+      phone: ['', Validators.required],
       user_password: ['', Validators.required],
       city: ['none'],
       country: ['Nigeria'],
@@ -45,10 +45,10 @@ export class SignupPage {
     })
   }
 
- 
+
 
   ionViewDidLoad() {
-  
+
   }
   page() {
     this.navCtrl.setRoot(SigninPage);
