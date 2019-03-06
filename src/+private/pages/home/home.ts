@@ -19,10 +19,10 @@ export class HomePage {
 
       type: 'doughnut',
       data: {
-          labels: ["Red", "Blue",],
+          labels: ["Received($)", "Spent($)"],
           datasets: [{
               label: '# of Votes',
-              data: [12, 19],
+              data: [2500, 55559],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
