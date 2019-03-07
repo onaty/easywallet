@@ -5,6 +5,8 @@ import { HomePage } from './pages/home/home';
 import { PrivatetabPage } from './pages/privatetab/privatetab';
 import { SettingsPage } from './pages/settings/settings';
 import { TransactionsPage } from './pages/transactions/transactions';
+import { SearchusertopayPage } from './pages/searchusertopay/searchusertopay';
+import { RequestorpayPage } from './modals/requestorpay/requestorpay';
 
 // import { HeaderComponent } from "./components/header/header";
 
@@ -23,17 +25,21 @@ import { TransactionsPage } from './pages/transactions/transactions';
     HomePage,
     PrivatetabPage,
     SettingsPage,
-    TransactionsPage
+    TransactionsPage,
+    SearchusertopayPage,
+    RequestorpayPage
   ],
   imports: [
     IonicModule,
   ],
-  bootstrap:[IonicApp],
+   bootstrap:[IonicApp],
   entryComponents: [
     HomePage,
     PrivatetabPage,
     SettingsPage,
-    TransactionsPage
+    TransactionsPage,
+    SearchusertopayPage,
+    RequestorpayPage
   ],
   providers: [
 
