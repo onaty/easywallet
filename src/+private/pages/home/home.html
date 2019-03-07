@@ -1,9 +1,10 @@
-<ion-content >
-  <div padding class="header">
-    <h6 class="">Balance</h6>
-    <h2 class="">$25,000</h2>
-  </div>
+<ion-content>
 
+    <div padding class="header">
+      <h6 class="">Balance</h6>
+      <h2 class="">$25,000</h2>
+    </div>
+    <!-- 
   <ion-card>
     <ion-card-header>
       Doughnut Chart
@@ -11,5 +12,85 @@
     <ion-card-content>
       <canvas #doughnutCanvas></canvas>
     </ion-card-content>
-  </ion-card>
-</ion-content>
+  </ion-card> -->
+
+    <div class="piechart">
+      <h2></h2>
+      <canvas #doughnutCanvas></canvas>
+
+    </div>
+
+    <!-- <div class="transactions-flex">
+    <div class="singletransactiondiv">
+
+    </div>
+  </div> -->
+    <br><br>
+    <ion-list no-lines>
+      <ion-list-header>
+        17 FEB 2018
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar class="setavatar" item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <!-- <ion-icon name="send"></ion-icon> -->
+          <p ion-text color="light">DV</p>
+        </ion-avatar>
+        <h2>Onasanya Oluwatobi</h2>
+        <p>Sent Money</p>
+        <div item-end>
+          <h2 ion-text color="danger">$2,5000</h2>
+          <p ion-text color="danger">debit</p>
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>4890******2909</h2>
+        <p>Credited Account</p>
+        <div item-end>
+          <h2 ion-text color="success">$2,5000</h2>
+          <p ion-text color="success">credit</p>
+        </div>
+      </ion-item>
+      <ion-list-header>
+        20 FEB 2018
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>Onasanya Oluwatobi</h2>
+        <p>Sent Money</p>
+        <div item-end>
+          <h2>$2,5000</h2>
+          <p>debit</p>
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>Mikel John</h2>
+        <p>Received Money</p>
+        <div item-end>
+          <h2>$2,0000</h2>
+          <p>credit</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button full>
+          <p> Send or Request Money </p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
