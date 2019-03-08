@@ -1,6 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { Chart } from 'chart.js';
+import { RequestorpayPage } from '../../modals/requestorpay/requestorpay';
 
 @Component({
   selector: 'page-home',
@@ -11,7 +12,11 @@ export class HomePage {
   @ViewChild('doughnutCanvas') doughnutCanvas;
 
   doughnutChart: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public modctrl: ModalController,
+    public navCtrl: NavController,
+     public navParams: NavParams
+     ) {
   }
 
   loadchart(){
@@ -41,6 +46,15 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
     this.loadchart();
+  }
+
+  requestpage(){
+    let myModal= this.modctrl.create(RequestorpayPage)
+    myModal.onDidDismiss(data => {
+      // this.ionViewDidLoad();
+    });
+    myModal.present();
+
   }
 
 }

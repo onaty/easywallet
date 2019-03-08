@@ -1,19 +1,33 @@
 <ion-header>
   <ion-navbar>
-    <ion-title></ion-title>
+    <ion-icon (click)="close()" padding-right float-right name="close"></ion-icon>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
   <div class="question">
-    <div class="mainquestion">
+    <div  class="mainquestion">
+      <h1 class="headquestion" >What would you like to do ?</h1>
+    </div>
+    <div class="questioncardscontainer">
+      <div (click)="gotopage('request')" margin-bottom padding class="questioncards">
+        <h5>Request Money</h5>
+        <p>Ask friends and family for money instantly.</p>
+      </div>
+
+      <div (click)="gotopage('pay')"  margin-bottom padding class="questioncards">
+          <h5>Send Money</h5>
+          <p>Send friends and family for money instantly.</p>
+        </div>
+
+        <div (click)="gotopage('pay')"  margin-bottom padding class="questioncards">
+            <h5>Pay</h5>
+            <p>Pay for your goods and services redenerd</p>
+          </div>
 
     </div>
-    
-    <div class="questioncards">
 
-    </div>
 
   </div>
 

@@ -1,3 +1,26 @@
 page-requestorpay {
-
+    .question{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+    }
+    .questioncardscontainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .headquestion{
+        font-size: 3.6rem;
+    }
+    .questioncards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        background-color: bisque;
+        border-radius: 10px;
+    }
 }

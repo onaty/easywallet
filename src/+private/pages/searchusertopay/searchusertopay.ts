@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
-
+import {  NavController, NavParams, Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-searchusertopay',
@@ -8,7 +7,9 @@ import {  NavController, NavParams } from 'ionic-angular';
 })
 export class SearchusertopayPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public platform: Platform,public navParams: NavParams) {
+     
   }
 
   ionViewDidLoad() {
