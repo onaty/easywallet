@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
+import { PrivatetabPage } from '../privatetab/privatetab';
 
 
 @Component({
@@ -13,6 +14,10 @@ export class SuccessfullysentPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SuccessfullysentPage');
+  }
+
+  homepage(){
+    this.navCtrl.setRoot(PrivatetabPage);
   }
 
 }

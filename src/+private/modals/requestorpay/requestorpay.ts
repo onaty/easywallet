@@ -16,7 +16,17 @@ export class RequestorpayPage {
   ) {
   }
 
+//   ionViewDidEnter() {
+//     this.platform.ready().then(() => {
+//       Keyboard.disableScroll(true);
+//     });
+// }
 
+// ionViewWillLeave() {
+//     this.platform.ready().then(() => {
+//       Keyboard.disableScroll(false);
+//     });
+// }
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad RequestorpayPage');

@@ -19,10 +19,16 @@ page-searchusertopay {
 
 input{
   text-align: center;
-  font-size: 9rem;
+  font-size: 4rem;
   color: white;
   font-weight: 400;
 }
+@media only screen and (min-width: 519px) {
+    input{
+        font-size: 7rem;
+       
+      }
+  }
 .ptag{
     color: #fff;
     font-size: 2rem;
