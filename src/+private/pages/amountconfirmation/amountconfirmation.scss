@@ -1,3 +1,64 @@
 page-amountconfirmation {
 
+    .toolbar-background-md{
+        background: #ffffff;  /* fallback for old browsers */
+       
+    }
+    .toolbar-title-md {
+        font-size: 2.7rem;
+        font-weight: 100;
+    }
+    .maindiv {
+        display: flex;
+        flex-direction: column;
+        border-radius: 9px;
+        -webkit-box-shadow: -1px 0px 39px 0px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: -1px 0px 39px 0px rgba(0, 0, 0, 0.38);
+        box-shadow: -1px 0px 39px 0px rgba(0, 0, 0, 0.38);
+    }
+
+    .infodiv {}
+
+    .inputdiv {
+        border-top-style: dashed;
+        border-top-color: grey;
+        margin-top: 5%;
+    }
+
+    ion-item {
+        background-color: unset !important;
+
+    }
+
+    .messagelabel {
+        margin-top: 5%;
+    }
+
+    .fontsizes {
+        font-weight: 200
+    }
+
+    .item-inner {
+        border-bottom: unset !important;
+    }
+
+    input {
+        font-weight: 400;
+    }
+
+
+
+    .item-md {
+        padding-left: 0px;
+    }
+
+
+    .header-md::after,
+    .tabs-md[tabsPlacement="top"]>.tabbar::after,
+    .footer-md::before,
+    .tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+
+        background-image: unset !important;
+
+    }
 }

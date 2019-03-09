@@ -1,3 +1,25 @@
 page-successfullysent {
+.maindiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+img{
+    border-radius: 50%;
+}
+
+
+    .header-md::after,
+    .tabs-md[tabsPlacement="top"]>.tabbar::after,
+    .footer-md::before,
+    .tabs-md[tabsPlacement="bottom"]>.tabbar::before {
+
+        background-image: unset !important;
+
+    }
 
 }

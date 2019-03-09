@@ -6,10 +6,38 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>amountconfirmation</ion-title>
+    <ion-title>Review and Send</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <div class="maindiv" padding margin-top>
+    <div class="infodiv">
+      <p ion-text color="greys">Send To</p>
+      <h3 class="fontsizes">Micheal Onasanya</h3>
+      <p class="fontsizes">+2347091627382</p>
+     <p ion-text color="greys">Final Amount</p>
+     <h1>$3,000</h1>
+      <p ion-text color="greys"><span float-left> Time: <span>Instant</span></span> <span float-right>FEE: <span>Free</span></span></p>
+    </div>
+    <div class="inputdiv">
+      <p ion-text color="greys" class="messagelabel" no-margin>Your Message optional</p>
+      <ion-item>
+        <ion-input ion-text color="greys" placeholder="Type your message" type="text"></ion-input>
+        <ion-icon color="greys" item-right name="create"></ion-icon>
+      </ion-item>
+    </div>
+  </div>
+
 
 </ion-content>
+
+<ion-footer>
+    <ion-row>
+      <ion-col col-12>
+        <button (click)="completetransaction()" round ion-button full>
+          <p> Send Money</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>
