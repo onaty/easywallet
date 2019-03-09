@@ -1,21 +1,21 @@
 <ion-header >
   <ion-navbar >
     <ion-title >
-      Sending money to Micheal 
+        <ion-icon *ngIf="showbackbutton" (click)=" closenav()" float-left name="arrow-back"></ion-icon>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <section class="ion-contentcss" padding>
   <div class="innercontent">
-    <p ion-text class="ptag" no-margin text-center><span>Balance :</span><span>$5,000</span></p>
+    <p ion-text class="ptag" no-margin text-center><span>Enter Recipients Phone Number</span></p>
     <!-- <input  placeholder="Enter passcode here." type='number'  /> -->
     <ion-item>
 
-      <ion-input placeholder="0" type="number"></ion-input>
+      <ion-input [(ngModel)]="phonenumber" autofocus placeholder="0" type="number"></ion-input>
 
     </ion-item>
-    <h1 class="htag" ion-text no-margin text-center>Currency : $</h1>
+    <!-- <h1 class="htag" ion-text no-margin text-center>Currency : $</h1> -->
 
 
   </div>
@@ -24,7 +24,7 @@
 </section>
 
 <ion-footer>
-  <div class="bottompart ">
-    <h2 class="htag">Send Money</h2>
+  <div (click)="enteramount()" class="bottompart ">
+    <h2 class="htag">Next</h2>
   </div>
 </ion-footer>

@@ -1,0 +1,60 @@
+page-enteramounttopay {
+    .ion-contentcss{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: 100%;
+        background: #acb6e5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+    }
+    .innercontent{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    input{
+      text-align: center;
+      font-size: 9rem;
+      color: white;
+      font-weight: 400;
+    }
+    .ptag{
+        color: #fff;
+        font-size: 2rem;
+    }
+    .htag{
+        color: #fff;
+    }
+    ion-item{
+        background-color: unset !important;
+    }
+    
+    .item-inner {
+        border-bottom: unset !important;
+    }
+    .bottompart{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        background-color: #60ec507a;
+    }
+    
+    .header{
+        background: #acb6e5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         
+    }
+    
+    .toolbar-background-md{
+        background: #acb6e5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         
+    }
+}

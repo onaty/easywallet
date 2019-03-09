@@ -7,6 +7,9 @@ import { SettingsPage } from './pages/settings/settings';
 import { TransactionsPage } from './pages/transactions/transactions';
 import { SearchusertopayPage } from './pages/searchusertopay/searchusertopay';
 import { RequestorpayPage } from './modals/requestorpay/requestorpay';
+import { EnteramounttopayPage } from './pages/enteramounttopay/enteramounttopay';
+import { AmountconfirmationPage } from './pages/amountconfirmation/amountconfirmation';
+import { SuccessfullysentPage } from './pages/successfullysent/successfullysent';
 
 // import { HeaderComponent } from "./components/header/header";
 
@@ -27,7 +30,10 @@ import { RequestorpayPage } from './modals/requestorpay/requestorpay';
     SettingsPage,
     TransactionsPage,
     SearchusertopayPage,
-    RequestorpayPage
+    RequestorpayPage,
+    EnteramounttopayPage,
+    AmountconfirmationPage,
+    SuccessfullysentPage
   ],
   imports: [
     IonicModule,
@@ -39,7 +45,10 @@ import { RequestorpayPage } from './modals/requestorpay/requestorpay';
     SettingsPage,
     TransactionsPage,
     SearchusertopayPage,
-    RequestorpayPage
+    RequestorpayPage,
+    EnteramounttopayPage,
+    AmountconfirmationPage,
+    SuccessfullysentPage
   ],
   providers: [
 
