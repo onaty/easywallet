@@ -10,6 +10,11 @@ import { RequestorpayPage } from './modals/requestorpay/requestorpay';
 import { EnteramounttopayPage } from './pages/enteramounttopay/enteramounttopay';
 import { AmountconfirmationPage } from './pages/amountconfirmation/amountconfirmation';
 import { SuccessfullysentPage } from './pages/successfullysent/successfullysent';
+import { EditprofilePage } from './pages/editprofile/editprofile';
+import { ChangepasswordPage } from './pages/changepassword/changepassword';
+import { ChangetransactionpinPage } from './pages/changetransactionpin/changetransactionpin';
+import { CustomercarePage } from './pages/customercare/customercare';
+import { ReferralPage } from './pages/referral/referral';
 
 // import { HeaderComponent } from "./components/header/header";
 
@@ -33,7 +38,12 @@ import { SuccessfullysentPage } from './pages/successfullysent/successfullysent'
     RequestorpayPage,
     EnteramounttopayPage,
     AmountconfirmationPage,
-    SuccessfullysentPage
+    SuccessfullysentPage,
+    EditprofilePage,
+    ChangepasswordPage,
+    ChangetransactionpinPage,
+    CustomercarePage,
+    ReferralPage
   ],
   imports: [
     IonicModule,
@@ -48,7 +58,12 @@ import { SuccessfullysentPage } from './pages/successfullysent/successfullysent'
     RequestorpayPage,
     EnteramounttopayPage,
     AmountconfirmationPage,
-    SuccessfullysentPage
+    SuccessfullysentPage,
+    EditprofilePage,
+    ChangepasswordPage,
+    ChangetransactionpinPage,
+    CustomercarePage,
+    ReferralPage
   ],
   providers: [
 

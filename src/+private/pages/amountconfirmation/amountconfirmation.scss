@@ -1,5 +1,11 @@
 page-amountconfirmation {
-
+    // .content-md {
+    //     background-color: #fff;
+    // }
+    
+    // .content-ios {
+    //     background-color: #fff;
+    // }
     .toolbar-background-md{
         background: #ffffff;  /* fallback for old browsers */
        
@@ -9,6 +15,7 @@ page-amountconfirmation {
         font-weight: 100;
     }
     .maindiv {
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         border-radius: 9px;
