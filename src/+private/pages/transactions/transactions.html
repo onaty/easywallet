@@ -6,32 +6,51 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>transactions</ion-title>
+    <ion-title>Transactions</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-<div padding>
-  <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      Kittens
-    </ion-segment-button>
-    <ion-segment-button value="puppies">
-      Puppies
-    </ion-segment-button>
-  </ion-segment>
+<ion-content >
+  <div >
+    <ion-segment [(ngModel)]="periodtype" (ionChange)="period($event)">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="spent">
+        Spent
+      </ion-segment-button>
+      <ion-segment-button value="received">
+        Received
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+<div>
+  <ion-list>
+      <ion-item>
+          <ion-label>Period</ion-label>
+          <ion-select [(ngModel)]="searchperiod" (ionChange)="searchperiods($event)" >
+            <ion-option value="today">Today</ion-option>
+            <ion-option value="n64">Yesterday</ion-option>
+            <ion-option value="ps">Last 7 days</ion-option>
+            <ion-option value="genesis">Last 30days</ion-option>
+            <ion-option value="saturn">This Month</ion-option>
+            <ion-option value="snes">This Year</ion-option>
+            <ion-option value="snes">All Time</ion-option>
+            <ion-option value="snes">Custom</ion-option>
+          </ion-select>
+        </ion-item>
+  </ion-list>
 </div>
-
-<div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'puppies'" no-lines>
-        <ion-list-header>
-           17 FEB 2018
-          </ion-list-header>
+  <div >
+    <ion-list no-lines>
+      <ion-list-header margin-top>
+        17 FEB 2018
+      </ion-list-header>
       <ion-item>
         <ion-avatar class="setavatar" item-start>
           <!-- <img src="../../../assets/imgs/logo.png"> -->
           <!-- <ion-icon name="send"></ion-icon> -->
-          <p ion-text color="light" >DV</p>
+          <p ion-text color="light">DV</p>
         </ion-avatar>
         <h2>Onasanya Oluwatobi</h2>
         <p>Sent Money</p>
@@ -41,53 +60,45 @@
         </div>
       </ion-item>
       <ion-item>
-          <ion-avatar item-start>
-            <!-- <img src="../../../assets/imgs/logo.png"> -->
-            <ion-icon name="send"></ion-icon>
-          </ion-avatar>
-          <h2>4890******2909</h2>
-          <p>Credited Account</p>
-          <div item-end>
-            <h2 ion-text color="success">$2,5000</h2>
-            <p ion-text color="success">credit</p>
-          </div>
-        </ion-item>
-        <ion-list-header>
-            20 FEB 2018
-          </ion-list-header>
-        <ion-item>
-            <ion-avatar item-start>
-              <!-- <img src="../../../assets/imgs/logo.png"> -->
-              <ion-icon name="send"></ion-icon>
-            </ion-avatar>
-            <h2>Onasanya Oluwatobi</h2>
-            <p>Sent Money</p>
-            <div item-end>
-              <h2>$2,5000</h2>
-              <p>debit</p>
-            </div>
-          </ion-item>
-          <ion-item>
-              <ion-avatar item-start>
-                <!-- <img src="../../../assets/imgs/logo.png"> -->
-                <ion-icon name="send"></ion-icon>
-              </ion-avatar>
-              <h2>Mikel John</h2>
-              <p>Received Money</p>
-              <div item-end>
-                <h2>$2,0000</h2>
-                <p>credit</p>
-              </div>
-            </ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>4890******2909</h2>
+        <p>Credited Account</p>
+        <div item-end>
+          <h2 ion-text color="success">$2,5000</h2>
+          <p ion-text color="success">credit</p>
+        </div>
+      </ion-item>
+      <ion-list-header margin-top>
+        20 FEB 2018
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>Onasanya Oluwatobi</h2>
+        <p>Sent Money</p>
+        <div item-end>
+          <h2>$2,5000</h2>
+          <p>debit</p>
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="../../../assets/imgs/logo.png"> -->
+          <ion-icon name="send"></ion-icon>
+        </ion-avatar>
+        <h2>Mikel John</h2>
+        <p>Received Money</p>
+        <div item-end>
+          <h2>$2,0000</h2>
+          <p>credit</p>
+        </div>
+      </ion-item>
     </ion-list>
-  
 
-  <ion-list *ngSwitchCase="'kittens'">
-    <ion-item>
-     <ion-label>kol</ion-label>
-     <ion-input type="number"> </ion-input>
-    </ion-item>
-  </ion-list>
-</div>
-
+  </div>
 </ion-content>
