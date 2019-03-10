@@ -16,7 +16,7 @@ export class ReferralPage {
     public plt: Platform,
     private iab: InAppBrowser,
     public actionSheetCtrl: ActionSheetController
-    ) {
+  ) {
 
   }
 
@@ -36,35 +36,52 @@ export class ReferralPage {
     this.socialSharing.share(message, subject, urltoshare)
   }
 
-  sharecode(){
+  sharecode() {
     if (this.plt.is("cordova")) {
-      this.openapps()
+      this.openapps();
     }
-    else{
+    else {
+      this.opentoast();
+    }
+    console.log('toaster')
+  }
+
+  webshare(value) {
+    if (value == 'facebook') {
+
+    } else if (value == 'twitter') {
+      const browser = this.iab.create(' https://twitter.com/intent/tweet?text=Hello%20world');
+
+    }
+    else if (value == 'whatsapp') {
+      const browser = this.iab.create('https://api.whatsapp.com/send?phone=+234076233232&text=&source=&data="');
 
     }
   }
 
-  webshare(){
-    const browser = this.iab.create('https://api.whatsapp.com/send?phone=+234076233232&text=&source=&data="');
-  }
-
-  opentoast(){
+  opentoast() {
     const actionSheet = this.actionSheetCtrl.create({
-      title: 'Modify your album',
+      title: 'Share via',
       buttons: [
         {
-          text: 'Destructive',
-          role: 'destructive',
+          text: 'Facebook',
           handler: () => {
-            console.log('Destructive clicked');
+            this.webshare('facebook')
           }
-        },{
-          text: 'Archive',
+        },
+        {
+          text: 'Twitter',
           handler: () => {
-            console.log('Archive clicked');
+            this.webshare('twitter')
           }
-        },{
+        },
+        {
+          text: 'WhatsApp',
+          handler: () => {
+            this.webshare('whatsapp')
+          }
+        },
+        {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
@@ -74,7 +91,7 @@ export class ReferralPage {
       ]
     });
     actionSheet.present();
-  
+
   }
 
 }
