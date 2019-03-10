@@ -19,6 +19,7 @@ import { VerifyModule } from '../+verify/verify.module';
 import { FeedbackService } from './services/feedback.service';
 import { AuthService } from './services/auth.service';
 
+import { EmailComposer } from '@ionic-native/email-composer';
 @NgModule({
   declarations: [
     MyApp,
@@ -42,7 +43,7 @@ import { AuthService } from './services/auth.service';
     MyApp
   ],
   providers: [
-    StatusBar,
+    StatusBar,EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
     SplashScreen,
