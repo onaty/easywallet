@@ -20,6 +20,8 @@ import { FeedbackService } from './services/feedback.service';
 import { AuthService } from './services/auth.service';
 
 import { EmailComposer } from '@ionic-native/email-composer';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +45,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
     MyApp
   ],
   providers: [
-    StatusBar,EmailComposer,
+    StatusBar,EmailComposer,InAppBrowser,SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {provide: HTTP_INTERCEPTORS, useClass: HttpClientInterceptor, multi: true},
     SplashScreen,
