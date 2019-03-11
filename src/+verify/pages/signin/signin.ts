@@ -8,7 +8,7 @@ import { PrivatetabPage } from '../../../+private/pages/privatetab/privatetab';
   templateUrl: 'signin.html',
 })
 export class SigninPage {
-
+  divtoshow = 'signin'
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -18,5 +18,14 @@ export class SigninPage {
 
   homepage() {
     this.navCtrl.setRoot(PrivatetabPage)
+  }
+  signup() {
+    this.divtoshow = 'signup'
+
+  }
+
+  signin() {
+
+    this.divtoshow = 'signin'
   }
 }

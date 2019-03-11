@@ -1,20 +1,20 @@
 <ion-content>
   <ion-grid no-padding class="rowdiv">
     <ion-row class="rowdiv">
-      <ion-col class="firstside"  col-lg-6 col-md-6>
+      <ion-col class="firstside" col-lg-6 col-md-6>
 
-        <ion-slides pager>
+        <ion-slides autoplay="5000" loop="true" speed="500" pager>
 
-          <ion-slide class="bg1" >
-            <h2>Slide 1</h2>
+          <ion-slide class="bg1">
+
           </ion-slide>
 
           <ion-slide class="bg2">
-            <h2>Slide 2</h2>
+
           </ion-slide>
 
           <ion-slide class="bg3">
-            <h2>Slide 3</h2>
+
           </ion-slide>
 
         </ion-slides>
@@ -22,59 +22,88 @@
       <ion-col class="secondside" col col-md-6 col-lg-6>
         <div class="heading">
           <div margin class="subheading">
-            <div float-left class="signup">
-              <p no-margin>Sign Up</p>
+            <div (click)="signup()" float-left class="signup">
+              <p ion-text color="light" no-margin>Sign Up</p>
             </div>
-            <div float-right class="signin">
-              <p no-margin>Sign In </p>
+            <div (click)="signin()" float-right class="signin">
+              <p color="light" ion-text no-margin>Sign In </p>
             </div>
           </div>
         </div>
 
-        <div class="inputdivs">
-          <div margin>
+        <div style="height:90%" *ngIf="divtoshow=='signup'" class="inputdivs">
 
-            <h2><span><u>Sign Up</u></span> or <span>Sign In</span></h2>
-          </div>
 
           <div class="listdiv">
+          
             <ion-list margin>
 
               <ion-item>
                 <ion-label stacked>First Name</ion-label>
-                <ion-input placeholder="Enter Your First Name" type="text"></ion-input>
+                <ion-input autocomplete="off" placeholder="Enter Your First Name" type="text"></ion-input>
               </ion-item>
 
               <ion-item>
                 <ion-label stacked>last Name</ion-label>
-                <ion-input placeholder="Enter Your Last Name" type="text"></ion-input>
+                <ion-input autocomplete="off" placeholder="Enter Your Last Name" type="text"></ion-input>
               </ion-item>
               <ion-item>
                 <ion-label stacked>Phone Number</ion-label>
-                <ion-input placeholder="Enter Your Phone Number" type="text"></ion-input>
+                <ion-input autocomplete="off" placeholder="Enter Your Phone Number" type="text"></ion-input>
               </ion-item>
 
               <ion-item>
                 <ion-label stacked>Email </ion-label>
-                <ion-input placeholder="Enter Your Email" type="text"></ion-input>
+                <ion-input autocomplete="off" class="text-input" placeholder="Enter Your Email" type="text"></ion-input>
               </ion-item>
 
               <ion-item>
                 <ion-label stacked>Password</ion-label>
-                <ion-input placeholder="" type="password"></ion-input>
+                <ion-input autocomplete="off" placeholder="" type="password"></ion-input>
               </ion-item>
 
               <ion-item>
-                <ion-label>I agree with all the statements in the <span ion-text color="light"><u>terms and services</u></span></ion-label>
-                <ion-checkbox color="dark" checked="true"></ion-checkbox>
+                <ion-label ion-text color="light">I agree with all the statements in the <span ion-text color="light"><u><b>terms and services</b> </u></span></ion-label>
+                <ion-checkbox color="fgreen" checked="true"></ion-checkbox>
               </ion-item>
               <ion-row>
                 <ion-col col-6>
 
-                  <button ion-button round full>Sign Up</button>
+                  <button color="fgreen" ion-button round full>Sign Up</button>
                 </ion-col>
                 <ion-col col-6>
-                  <p><u>I have an account already</u></p>
+                  <p ion-text (click)="signin()" color="light"><u>I have an account already</u></p>
+                </ion-col>
+              </ion-row>
+            </ion-list>
+          </div>
+        </div>
+        <div style="height:90%"  *ngIf="divtoshow=='signin'" class="inputdivs">
+       
+
+          <div class="listdiv">
+            
+            <ion-list margin>
+
+
+              <ion-item>
+                <ion-label stacked>Email </ion-label>
+                <ion-input autocomplete="off" placeholder="Enter Your Email" type="text"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input autocomplete="off" placeholder="****" type="password"></ion-input>
+              </ion-item>
+
+
+              <ion-row>
+                <ion-col col-6>
+
+                  <button color="fgreen" ion-button round full>Sign In</button>
+                </ion-col>
+                <ion-col col-6>
+                  <p ion-text (click)="signup()" color="light"><u>I don't have an account</u></p>
                 </ion-col>
               </ion-row>
             </ion-list>
