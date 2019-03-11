@@ -1,3 +1,21 @@
 page-requestmoney {
-
+    .maindiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        height: 100;
+    }
+    .toolbar-background-md {
+        border-color: #f3f2f2;
+        background: #f3f2f2;
+      }
+    
+      h2{
+        color: #0000ff91;
+      }
+    
+      p{
+        color: #0080008c;
+      }
 }

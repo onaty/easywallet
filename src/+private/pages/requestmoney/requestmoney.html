@@ -6,10 +6,37 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>requestmoney</ion-title>
+    <!-- <ion-title>requestmoney</ion-title> -->
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
 
-</ion-content>
+<ion-content padding>
+    <div class="maindiv">
+      <h2 ion-text text-center>Ask for Money</h2>
+      <p ion-text text-center>Your friends can scan the code below to send you money.</p>
+  
+      <img src="assets/imgs/girl.jpg" alt="profile">
+  
+      <br>
+      <div>
+        <p ion-text text-center>They can simply send money to your number</p>
+        <h2 ion-text text-center>0909322342</h2>
+      </div>
+      <!-- <div>
+        <p ion-text text-center>or</p>
+      </div> -->
+<!--   
+      <div> create link to receive money like rave
+        <p ion-text text-center>Share using personal referral link</p>
+        <a href="">
+          <h2 ion-text text-center>http://goo.gl/xujqot</h2>
+        </a>
+      </div> -->
+  
+      <button (click)="sharecode()" color="secondary"  ion-button full>Ask for Money</button>
+  
+  
+      <!-- <button ion-button color="secondary" full>View your progress</button>like piggy bank -->
+    </div>
+  </ion-content>

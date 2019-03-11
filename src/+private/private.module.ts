@@ -16,6 +16,8 @@ import { ChangetransactionpinPage } from './pages/changetransactionpin/changetra
 import { CustomercarePage } from './pages/customercare/customercare';
 import { ReferralPage } from './pages/referral/referral';
 import { SingletransactionPage } from './pages/singletransaction/singletransaction';
+import { ScancodePage } from './pages/scancode/scancode';
+import { RequestmoneyPage } from './pages/requestmoney/requestmoney';
 
 // import { HeaderComponent } from "./components/header/header";
 
@@ -45,7 +47,9 @@ import { SingletransactionPage } from './pages/singletransaction/singletransacti
     ChangetransactionpinPage,
     CustomercarePage,
     ReferralPage,
-    SingletransactionPage
+    SingletransactionPage,
+    ScancodePage,
+    RequestmoneyPage
   ],
   imports: [
     IonicModule,
@@ -66,7 +70,9 @@ import { SingletransactionPage } from './pages/singletransaction/singletransacti
     ChangetransactionpinPage,
     CustomercarePage,
     ReferralPage,
-    SingletransactionPage
+    SingletransactionPage,
+    ScancodePage,
+    RequestmoneyPage
   ],
   providers: [
 

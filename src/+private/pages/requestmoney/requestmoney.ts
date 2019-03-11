@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, ActionSheetController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the RequestmoneyPage page.
@@ -15,11 +17,90 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RequestmoneyPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private socialSharing: SocialSharing,
+    public plt: Platform,
+    private iab: InAppBrowser,
+    public actionSheetCtrl: ActionSheetController
+  ) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RequestmoneyPage');
+    console.log('ionViewDidLoad ReferralPage');
+  }
+
+  openapps() {
+    var message = `
+  
+    we love easy wallet
+    
+    `
+
+    var urltoshare = '  www.google.com '
+    var subject = 'Start using easy wallet'
+    this.socialSharing.share(message, subject, urltoshare)
+  }
+
+  sharecode() {
+    if (this.plt.is("cordova")) {
+      this.openapps();
+    }
+    else {
+      this.opentoast();
+    }
+    console.log('toaster')
+  }
+
+  webshare(value) {
+    if (value == 'facebook') {
+
+    } else if (value == 'twitter') {
+      const browser = this.iab.create(' https://twitter.com/intent/tweet?text=Hello%20world');
+
+    }
+    else if (value == 'whatsapp') {
+      const browser = this.iab.create('https://api.whatsapp.com/send?phone=+234076233232&text=&source=&data="');
+
+    }
+  }
+
+  opentoast() {
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Share via',
+      buttons: [
+        {
+          text: 'Facebook',
+          handler: () => {
+            this.webshare('facebook')
+          }
+        },
+        {
+          text: 'Twitter',
+          handler: () => {
+            this.webshare('twitter')
+          }
+        },
+        {
+          text: 'WhatsApp',
+          handler: () => {
+            this.webshare('whatsapp')
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+
   }
 
 }

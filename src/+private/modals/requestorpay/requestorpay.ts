@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController, Platform } from 'ionic-angular';
 import { SearchusertopayPage } from '../../pages/searchusertopay/searchusertopay';
+import { RequestmoneyPage } from '../../pages/requestmoney/requestmoney';
 
 
 @Component({
@@ -38,7 +39,7 @@ export class RequestorpayPage {
   gotopage(pagename) {
     if (pagename === 'request') {
     
-        this.navCtrl.push(SearchusertopayPage);
+        this.navCtrl.push(RequestmoneyPage);
         this.viewctrl.dismiss();
     }
     else if (pagename === 'pay') {
