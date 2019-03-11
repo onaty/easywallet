@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
+import { SingletransactionPage } from '../singletransaction/singletransaction';
 
 
 @Component({
@@ -20,5 +21,9 @@ export class TransactionsPage {
   searchperiods($event){
 
     console.log(this.searchperiod)
+  }
+  singletransaction(){
+
+  this.navCtrl.push(SingletransactionPage)
   }
 }

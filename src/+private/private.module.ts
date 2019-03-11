@@ -15,6 +15,7 @@ import { ChangepasswordPage } from './pages/changepassword/changepassword';
 import { ChangetransactionpinPage } from './pages/changetransactionpin/changetransactionpin';
 import { CustomercarePage } from './pages/customercare/customercare';
 import { ReferralPage } from './pages/referral/referral';
+import { SingletransactionPage } from './pages/singletransaction/singletransaction';
 
 // import { HeaderComponent } from "./components/header/header";
 
@@ -43,7 +44,8 @@ import { ReferralPage } from './pages/referral/referral';
     ChangepasswordPage,
     ChangetransactionpinPage,
     CustomercarePage,
-    ReferralPage
+    ReferralPage,
+    SingletransactionPage
   ],
   imports: [
     IonicModule,
@@ -63,7 +65,8 @@ import { ReferralPage } from './pages/referral/referral';
     ChangepasswordPage,
     ChangetransactionpinPage,
     CustomercarePage,
-    ReferralPage
+    ReferralPage,
+    SingletransactionPage
   ],
   providers: [
 
